@@ -15,8 +15,8 @@ dictionary = {
 }
 res = index.get_objects([dictionary["startId"]])
 
-print res['results'][0]['meaning']
+print(res['results'][0]['meaning'])
 
 res = index.get_objects([dictionary["stopId"]])
 
-print res['results'][0]['meaning']
+print(res['results'][0]['meaning'])
