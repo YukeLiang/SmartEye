@@ -88,7 +88,7 @@ while True:
 	(scores, geometry) = net.forward(layerNames)
 	end = time.time()
 
-	print("took {:.6f} seconds".format(end - start))
+	#print("took {:.6f} seconds".format(end - start))
 
 	(numRows, numCols) = scores.shape[2:4]
 	rects = []
@@ -154,7 +154,7 @@ while True:
 					tts = gTTS(text=text, lang="en")
 					tts.save(audio_file)
 					return_code = subprocess.call(["afplay", audio_file])
-				else if text.lower() == "stop":
+				elif text.lower() == "stop":
 					res = index.get_objects([dictionary["stopId"]])
 					text = res['results'][0]['meaning']
 					tts = gTTS(text=text, lang="en")
